@@ -3,7 +3,7 @@
 This Chrome Extension allows you to easily download specific folders from any GitHub repository without cloning the entire repository. It achieves this entirely within your browser using the GitHub REST API and client-side ZIP compression.
 
 ## Features
-- **Seamless UI Integration**: Injects a "Download Directory" button natively into the GitHub file viewer interface.
+- **Seamless Context Menu**: Simply right-click anywhere while browsing a GitHub folder to download it, avoiding any UI breakage when GitHub updates their site.
 - **Fast and Efficient**: Uses GitHub's `git/trees` API to fetch folder structure recursively.
 - **Smart Fetching**: Retrieves the file content directly from GitHub's raw CDN (`raw.githubusercontent.com`) to avoid burning through your API rate limit for file downloads.
 - **Client-Side Compression**: Compresses files into a `.zip` archive on your browser using `JSZip` - no servers involved!
@@ -19,6 +19,16 @@ Since this extension is locally developed, you need to load it unpacked into Chr
 4. Click on the **Load unpacked** button that appears in the top left corner.
 5. Select the `github_folder_downloader_extensions` folder containing the `manifest.json`.
 6. The extension is now successfully installed!
+
+## Usage Instructions
+
+1. Navigate to any repository on GitHub.
+2. Click into the specific folder/directory you want to download.
+3. Wait for the page to load the file list.
+4. **Right-click** anywhere on the page to open the context menu.
+5. Select **"Download GitHub Folder as Zip"**.
+6. A floating progress bar will appear at the bottom right of your screen to show the download and compression progress.
+7. Once finished, the ZIP file will automatically download to your computer.
 
 ## GitHub API Rate Limits & Token Configuration
 
